@@ -1,0 +1,11 @@
+<div class="container">
+    <h2 class="text-center">Search for a book</h2>
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="title">Enter the book title:</label>
+        <input type="text" formControlName="title" placeholder="Title name of the book" name="title" class="form-control" id="title">
+      </div>
+
+      <button class="btn btn-success">Submit</button>
+    </form>
+</div>

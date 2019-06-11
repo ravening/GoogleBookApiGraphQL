@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <mat-progress-spinner class="example-loading-shade" *ngIf="isLoading"></mat-progress-spinner>
+
+  <button class="btn btn-primary"
+          (click)="goBack()"
+          color="accent">Back</button>
+  <br>
+  <br>
+  <mat-card>
+    <mat-card-title>Book details</mat-card-title>
+    <br>
+    <table class="table table-bordered table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Authors</th>
+        <th scope="col">Description</th>
+        <th scope="col">Publisher</th>
+        <th scope="col">Published Date</th>
+        <th scope="col">Ratings</th>
+        <th scope="col">Language</th>
+        <th scope="col">Page Count</th>
+        <th scope="col">Image</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books.items">
+          <td>{{book.volumeInfo.title}}</td>
+          <td>{{book.volumeInfo.authors}}</td>
+          <td>{{book.volumeInfo.description}}</td>
+          <td>{{book.volumeInfo.publisher}}</td>
+          <td>{{book.volumeInfo.publishedDate}}</td>
+          <td>{{book.volumeInfo.averageRating}}</td>
+          <td>{{book.volumeInfo.language}}</td>
+          <td>{{book.volumeInfo.pageCount}}</td>
+          <img src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="Image">
+        </tr>
+      </tbody>
+    </table>
+  </mat-card>
+  <br>
+  <br>
+</div>

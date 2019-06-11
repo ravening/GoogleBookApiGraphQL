@@ -1,0 +1,38 @@
+<div class="example-loading-shade" *ngIf="isLoading">
+  <mat-progress-spinner
+    class="tp-margin"
+    [color]="color"
+    [mode]="mode"
+    [value]="value"
+    *ngIf="isLoading"></mat-progress-spinner>
+</div>
+<div class="container-fluid">
+<!--  <mat-spinner class="example-loading-shade" *ngIf="isLoading"></mat-spinner>-->
+
+  <mat-card>
+    <mat-card-title>Books</mat-card-title>
+    <br>
+    <br>
+    <table class="table table-bordered table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Authors</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let book of books.data.booksByTitle">
+        <td>
+          <a routerLink="/bookdetails/{{book.id}}">
+            {{book.id}}
+          </a>
+        </td>
+        <td>{{book.title}}</td>
+        <td>{{book.authors}}</td>
+      </tr>
+
+      </tbody>
+    </table>
+  </mat-card>
+</div>

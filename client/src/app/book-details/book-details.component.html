@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <mat-progress-spinner class="example-loading-shade" *ngIf="isLoading"></mat-progress-spinner>
+
+  <button class="btn btn-primary"
+          (click)="goBack()"
+          color="accent">Back</button>
+  <br>
+  <br>
+  <mat-card>
+    <mat-card-title>Book details</mat-card-title>
+    <br>
+    <table class="table table-bordered table-hover">
+      <tbody>
+      <tr>
+        <th scope="row">Book Title</th>
+        <td>{{book.data.book.title}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Book Authors</th>
+        <td>{{book.data.book.authors}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Description</th>
+        <td>{{book.data.book.description}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Publisher</th>
+        <td>{{book.data.book.publisher}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Published Date</th>
+        <td>{{book.data.book.publishedDate}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Ratings</th>
+        <td>{{book.data.book.averageRating}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Language</th>
+        <td>{{book.data.book.language}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Image</th>
+        <img src="{{book.data.book.thumbnail}}" alt="Image">
+<!--        <td>{{book.osidSap}}</td>-->
+      </tr>
+      </tbody>
+    </table>
+  </mat-card>
+  <br>
+  <br>
+</div>
+
